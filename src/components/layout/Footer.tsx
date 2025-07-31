@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -126,7 +127,7 @@ export default function Footer() {
               </motion.button>
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-8 mt-12 text-center">
