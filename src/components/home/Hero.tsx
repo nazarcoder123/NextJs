@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
+    <div >
     <section className="relative h-screen">
       <div className="absolute inset-0">
         <Image
@@ -57,5 +58,51 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    <section className="hero-section" style={{ padding: '2rem', textAlign: 'center' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700 }}>
+            
+            Explore new worlds with <br /> exotic natural scenery
+          </h1>
+          <p style={{ color: '#555', marginTop: '0.5rem' }}>
+            Explore the world with what you love beautiful natural beauty.
+          </p>
+
+          {/* Image Grid */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1.5rem',
+            marginTop: '2rem',
+            flexWrap: 'wrap'
+          }}>
+            {/* Image 1 */}
+            <div style={{ maxWidth: '300px' }}>
+              <Image src="/images/bali.png" alt="Bali" width={300} height={200} style={{ borderRadius: '12px' }} />
+              <h3 style={{ marginTop: '0.5rem' }}>Bali, Indonesia.</h3>
+              <p style={{ fontSize: '0.875rem', color: '#555' }}>
+                Bali is a beautiful tourist spot and is visited by many travelers.
+              </p>
+            </div>
+
+            {/* Image 2 */}
+            <div style={{ maxWidth: '300px' }}>
+              <Image src="/images/vietnam.png" alt="Vietnam" width={300} height={200} style={{ borderRadius: '12px' }} />
+              <h3 style={{ marginTop: '0.5rem' }}>Vietnam</h3>
+              <p style={{ fontSize: '0.875rem', color: '#555' }}>
+                Experience peaceful waters and limestone islands.
+              </p>
+            </div>
+
+            {/* Image 3 */}
+            <div style={{ maxWidth: '300px' }}>
+              <Image src="/images/newyork.png" alt="New York" width={300} height={200} style={{ borderRadius: '12px' }} />
+              <h3 style={{ marginTop: '0.5rem' }}>New York, USA</h3>
+              <p style={{ fontSize: '0.875rem', color: '#555' }}>
+                Discover the city that never sleeps, full of culture and lights.
+              </p>
+            </div>
+          </div>
+        </section>
+    </div>
   );
 }

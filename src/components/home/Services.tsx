@@ -7,17 +7,17 @@ const services = [
   {
     title: 'Best Service',
     description: 'our service is reliable and convenient, our service is quality.',
-    icon: '/icons/best-service.svg',
+    icon: '/icons/best-service.png',
   },
   {
     title: 'Price Guarantee',
     description: 'our service is reliable and convenient, our service is quality.',
-    icon: '/icons/price-guarantee.svg',
+    icon: '/icons/price-guarantee.png',
   },
   {
     title: 'Handpicked Hotels',
     description: 'our service is reliable and convenient, our service is quality.',
-    icon: '/icons/hotel.svg',
+    icon: '/icons/hotel.png',
   },
 ];
 
