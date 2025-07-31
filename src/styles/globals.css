@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1512px] mx-auto px-4;
+  }
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-black bg-white w-12 h-12 rounded-full shadow-lg;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-xl;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-gray-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-black;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
