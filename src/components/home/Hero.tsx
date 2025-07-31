@@ -2,107 +2,106 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div >
-    <section className="relative h-screen">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/banner-unsplash-Ll9bGE6w8uw.png"
-          alt="Hero Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      <div className="container relative h-full flex flex-col justify-center">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-7xl font-bold leading-tight mb-6">
-            Make in
-            <br />
-            your journey.
-          </h1>
-          <p className="text-lg text-gray-200 mb-8">
-            Explore the world with what you love beautiful natural beauty.
-          </p>
-          
-          <div className="bg-white rounded-[72px] p-5 shadow-xl max-w-[732px]">
-            <div className="grid grid-cols-3 gap-6">
-              <div className="flex items-center gap-2">
-                <span className="text-gray-600 font-semibold">Location</span>
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-gray-600 font-semibold">Date</span>
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-gray-600 font-semibold">People</span>
-                <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-            <button className="bg-black text-white rounded-full py-3 px-6 mt-4 font-semibold hover:opacity-90 transition-opacity">
-              Explore now
-            </button>
-          </div>
-
-          <p className="mt-8 text-gray-300">
-            Popular Place : Bali, Istanbul, Rome, Paris.
-          </p>
+    <div>
+      <section className="relative h-screen">
+        {/* Background Image with overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/banner-unsplash-Ll9bGE6w8uw.png"
+            alt="Hero Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
-      </div>
-    </section>
-    <section className="hero-section" style={{ padding: '2rem', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700 }}>
-            
-            Explore new worlds with <br /> exotic natural scenery
-          </h1>
-          <p style={{ color: '#555', marginTop: '0.5rem' }}>
-            Explore the world with what you love beautiful natural beauty.
-          </p>
 
-          {/* Image Grid */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '1.5rem',
-            marginTop: '2rem',
-            flexWrap: 'wrap'
-          }}>
-            {/* Image 1 */}
-            <div style={{ maxWidth: '300px' }}>
-              <Image src="/images/bali.png" alt="Bali" width={300} height={200} style={{ borderRadius: '12px' }} />
-              <h3 style={{ marginTop: '0.5rem' }}>Bali, Indonesia.</h3>
-              <p style={{ fontSize: '0.875rem', color: '#555' }}>
-                Bali is a beautiful tourist spot and is visited by many travelers.
-              </p>
+        {/* Foreground Content */}
+        <div className="container relative h-full flex flex-col justify-center">
+          <div className="max-w-2xl text-white">
+            <h1 className="text-7xl font-bold leading-tight mb-6">
+              Make in
+              <br />
+              your journey.
+            </h1>
+            <p className="text-lg text-gray-200 mb-8">
+              Explore the world with what you love beautiful natural beauty.
+            </p>
+
+            {/* Filter Box with Explore Now button aligned right */}
+            <div className="bg-white rounded-[72px] px-6 py-5 shadow-xl max-w-[840px] flex items-center justify-between gap-6 flex-wrap">
+              {/* Filters */}
+              <div className="flex items-center gap-6 flex-wrap text-sm font-semibold text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span>Location</span>
+                  <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>Date</span>
+                  <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span>People</span>
+                  <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Explore Button */}
+              <button className="bg-black text-white rounded-full py-3 px-6 text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap">
+                Explore now
+              </button>
             </div>
 
-            {/* Image 2 */}
-            <div style={{ maxWidth: '300px' }}>
-              <Image src="/images/vietnam.png" alt="Vietnam" width={300} height={200} style={{ borderRadius: '12px' }} />
-              <h3 style={{ marginTop: '0.5rem' }}>Vietnam</h3>
-              <p style={{ fontSize: '0.875rem', color: '#555' }}>
-                Experience peaceful waters and limestone islands.
-              </p>
-            </div>
-
-            {/* Image 3 */}
-            <div style={{ maxWidth: '300px' }}>
-              <Image src="/images/newyork.png" alt="New York" width={300} height={200} style={{ borderRadius: '12px' }} />
-              <h3 style={{ marginTop: '0.5rem' }}>New York, USA</h3>
-              <p style={{ fontSize: '0.875rem', color: '#555' }}>
-                Discover the city that never sleeps, full of culture and lights.
-              </p>
-            </div>
+            {/* Popular places */}
+            <p className="mt-8 text-gray-300">
+              Popular Place : Bali, Istanbul, Rome, Paris.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
+
+      {/* Lower Section */}
+      <section className="hero-section px-8 text-center mt-12">
+        <h1 className="text-4xl font-bold">
+          Explore new worlds with <br /> exotic natural scenery
+        </h1>
+        <p className="text-gray-600 mt-2">
+          Explore the world with what you love beautiful natural beauty.
+        </p>
+
+        {/* Image Grid */}
+        <div className="mt-8 flex justify-center gap-6 flex-wrap">
+          {[
+            {
+              src: '/images/bali.png',
+              title: 'Bali, Indonesia.',
+              desc: 'Bali is a beautiful tourist spot and is visited by many travelers.',
+            },
+            {
+              src: '/images/vietnam.png',
+              title: 'Vietnam',
+              desc: 'Experience peaceful waters and limestone islands.',
+            },
+            {
+              src: '/images/newyork.png',
+              title: 'New York, USA',
+              desc: 'Discover the city that never sleeps, full of culture and lights.',
+            },
+          ].map((item, idx) => (
+            <div key={idx} className="max-w-[300px]">
+              <Image src={item.src} alt={item.title} width={300} height={200} className="rounded-xl" />
+              <h3 className="mt-2 font-semibold">{item.title}</h3>
+              <p className="text-sm text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
